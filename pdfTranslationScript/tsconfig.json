@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "jsxFactory": "h",
+        "jsxFragmentFactory": "DocumentFragment",
+
+        "module": "CommonJS",
+        "target": "es2019"
+    }
+}

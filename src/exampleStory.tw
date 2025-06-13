@@ -1,0 +1,177 @@
+:: StoryTitle
+Translations
+
+:: StoryData
+{
+	"ifid": "0D6AE010-A593-4277-9184-A5518F179846",
+	"format": "SugarCube",
+	"format-version": "2.34.1",
+	"start": "Start"
+}
+
+:: Start
+<div id="translationContainer" class="translationStyle"><br data-i="0" /></div>
+<div id="toReveal" class="hidden"><span class="translationStyle">—罗贯中 (1330-1400)</span>
+
+    Part of the opening sentence of <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Romance_of_the_Three_Kingdoms">Romance of the Three Kingdoms</a>, one of China's <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Classic_Chinese_Novels">great classical novels</a>. Attributed to novelist <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Luo_Guanzhong">罗贯中 (Luo Guanzhong)</a>, though it is uncertain if he wrote it.
+
+    <span style="font-size: 50px">[[→|Mao1]]</span>
+</div>
+
+<<done>><<script>>
+    var divide = ["分", ["divided", "separate", "apart", "differentiated"]];
+    var long = ["久", ["long time"]];
+    var long2 = [[long], ["long"]];
+    var must = ["必", ["must", "invariably", "surely"]];
+    var join = ["合", ["joined", "unite", "combine"]];
+
+    var clause1 = [
+        [divide, long2, must, join],
+        ["What is long divided must unite"]
+    ];
+
+    var clause2 = [
+        [join, long2, must, divide],
+        ["What is long united must divide"]
+    ];
+
+    var final = [
+        [clause1, "，<br/>", clause2, "。"],
+        ["The empire, long divided, must unite; long united, must divide.", "What is long divided must unite; what is long united must divide."]
+    ];
+    setup.addTranslations([final], "translationContainer", "toReveal");
+<</script>><</done>>
+
+:: Mao1
+<div id="translationContainer" class="translationStyle"><br data-i="0" /></div>
+<div id="toReveal" class="hidden"><span class="translationStyle">—毛泽东 (1893-1976)</span>
+
+    The PRC government generally views <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Mao_Zedong">毛泽东 (Mao Zedong)</a> as a flawed but heroic revolutionary, the father of the country who established the People's Republic of China (PRC) in 1949 after years of civil war and began modernizing the country. Western governments generally view him as a dictator who killed millions with the <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Great_Chinese_Famine">Great Chinese Famine</a> and <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Cultural_Revolution">Cultural Revolution</a>.
+
+    <span style="font-size: 50px">[[→|Hua1]]</span>
+</div>
+
+<<done>><<script>>
+    // 枪杆子里面出政权
+    var c1 = ["枪", ["gun", "firearm"]];
+    var c2 = ["杆", ["rod", "pole"]];
+    var zi = ["子", [""]];
+    var c2c = [[c1, c2, zi], ["a gun barrel", "the barrel of a gun"]];
+
+    var c3 = ["里", ["inside", "in", "within"]];
+    var c4 = ["面", ["surface", "top", "face"]];
+    var c4b = [[c3, c4], ["inside", "in", "within", "interior"]];
+
+    var clause1 = [[c2c, c4b], ["From within the barrel of a gun", "From the barrel of a gun"]];
+
+    var c5 = ["出", ["out", "emerge", "leave", "exit"]];
+    var c5b = [[c5], ["emerges", "comes"]];
+
+    var c6 = ["政", ["government", "governmental", "political", "regulation", "regulatory"]];
+    var c7 = ["权", ["power", "authority", "entitlement", "right"]];
+    var c7b = [[c6, c7], ["political power", "regime"]];
+
+    var final = [[clause1, c5b, c7b, "。"], ["Political power emerges from the barrel of a gun.", "Political power grows out of the barrel of a gun."]];
+
+    setup.addTranslations([final], "translationContainer", "toReveal");
+<</script>><</done>>
+
+:: Hua1
+<div id="translationContainer" class="translationStyle">
+    <br data-i="0" /><br data-i="1" />
+</div>
+<div id="toReveal" class="hidden"><span class="translationStyle">—华国锋 (1921-2008)</span>
+
+   <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Hua_Guofeng">华国锋 (Hua Guofeng)</a> was Mao's chosen successor after his other chosen successors failed. He was pushed out of power by Deng Xiaoping around the late 1970s. Known for his <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Two_Whatevers">"Two Whatevers"</a>, of which this is one.
+
+    <span style="font-size: 50px">[[→|Deng1]]</span>
+</div>
+
+<<done>><<script>>
+    // 凡是毛主席的指示，我们都始终不渝地遵循
+    var c1 = ["凡", ["in general", "all", "every", "any"]];
+    var c2 = ["是", ["are", "is", "be"]];
+    var c2b = [[c1, c2], ["Whatever are", "All of", "Every one of"]];
+
+    var c3 = ["毛", ["feathers", "fur", "hair"]];
+    var c3b = [[c3], ["máo"]];
+    var c4 = ["主", ["owner", "master", "host", "main"]];
+    var c5 = ["席", ["seat"]];
+    var c5b = [[c4, c5], ["chairman"]];
+    var c5c = [[c3b, c5b], ["Chairman Mao"]];
+
+    var c6 = ["的", ["'s"]];
+
+    var c7 = ["指", ["point", "indicate", "aim"]];
+    var c8 = ["策", ["plan", "scheme", "strategy"]];
+    var c8b = [[c7, c8], ["instructions", "directions"]];
+
+    var c9 = ["我们", ["we"]];
+    var c10 = ["都", ["all", "entirely,"]];
+
+    var c11 = ["始", ["begin", "beginning", "start", "initial"]];
+    var c12 = ["终", ["end", "ending", "termination"]];
+    var c13 = [[c11, c12], ["from beginning to end,", "consistently,"]];
+    var c14 = ["不", ["no", "not", "without"]];
+    var c15 = ["渝", ["change", "going against", "contrary to"]];
+    var c15b = [[c14, c15], ["without going against", "without questioning"]];
+    var c15c = [[c13, c15b], ["unswervingly", "without question"]];
+
+    var di = ["地", [""]];
+    var c17 = ["遵循", ["follow", "obey", "comply with"]];
+
+    var prefinal1 = [[c2b, c5c, c6, c8b, "，"], ["Whatever Chairman Mao's instructions are,", "Whatever instructions Chairman Mao gave,"]];
+    var prefinal2 = [[c9, c10, c15c, di, c17, "。"], ["we will unswervingly follow them.", "we will always obey them."]];
+
+    setup.addTranslations([prefinal1, prefinal2], "translationContainer", "toReveal");
+<</script>><</done>>
+
+:: Deng1
+<div id="translationContainer" class="translationStyle">
+    <br data-i="0" /><br data-i="1" /><br data-i="2" />
+</div>
+<div id="toReveal" class="hidden"><span class="translationStyle">—邓小平, 1904-1997</span>
+
+<a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Deng_Xiaoping">邓小平 (Deng Xiaoping)</a>, the next major PRC leader after Mao, <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Reform_and_opening_up">introduced markets to the PRC and opened it to foreign investment</a>. Credited for the PRC's modern economic prosperity. Criticized in the West for the <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/1989_Tiananmen_Square_protests_and_massacre">1989 Tiananmen Square massacre</a>. <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Cat_theory_(Deng_Xiaoping)">The proverb above</a> refers to his market reforms being accepted into a previously anti-market system.
+
+    <span style="font-size: 50px">[[↵|Start]]</span>
+</div>
+
+<<done>><<script>>
+    // 不管黑猫白猫，捉到老鼠就是好猫。
+    var c1 = ["不", ["no", "not", "without"]];
+    var c2 = ["管", ["care", "caring", "minding", "concerned with", "managing", "controlling", "administrating"]];
+    var c2b = [[c1, c2], ["Don't concern yourself with", "It doesn't matter", "No matter"]];
+
+    var c3 = ["黑", ["black", "dark"]];
+    var c4 = ["猫", ["cat"]];
+    var c5 = ["白", ["white", "clear", "bright"]];
+
+    var c6 = [
+        [c3, c4, c5, c4],
+        ["black cat or white cat", "black or white cat"]
+    ];
+    var c7 = [[c6, "，"], ["whether the cat is black or white;", "if a cat is black or white;"]];
+
+    var d1 = ["捉", ["find", "search", "finding", "searching"]];
+    var d2 = ["到", ["arrive", "reach", "go to", "leave for"]];
+    var d2b = [[d1, d2], ["find", "search", "finding", "searching"]];
+
+    var d3 = ["老", ["old", "aged", "senior"]];
+    var d4 = ["鼠", ["rodent"]];
+    var d4b = [[d3, d4], ["rat", "mouse"]];
+    var d4c = [[d4b], ["rats", "mice"]];
+
+    var d5 = ["就", ["then"]];
+    var d6 = ["是", ["is", "be"]];
+    var d7 = ["好", ["good", "well"]];
+
+    var clause2 = [
+        [d2b, d4b, d5, d6, d7, c4, "。"],
+        ["it's good as long as it catches mice.", "if it catches mice it's a good cat."]
+    ]
+
+    var final = [c2b, c7, clause2];
+
+    setup.addTranslations(final, "translationContainer", "toReveal");
+<</script>><</done>>

@@ -1,0 +1,374 @@
+:: Example1
+<div id="container1" class="translationStyle"><br data-i="0" /></div>
+<div id="container2" class="translationStyle hidden"><br data-i="0" /></div>
+<div id="container3" class="translationStyle hidden"><br data-i="0" /></div>
+
+<span id="nextLink" class="hidden">[[Next|Example2]]</span>
+
+<<done>><<script>>
+var red = ["红", ["red", "redden"]];
+var green = ["绿", ["green"]];
+var blue = ["蓝", ["blue"]];
+
+setup.addTranslations([red], "container1", "container2");
+setup.addTranslations([green], "container2", "container3");
+setup.addTranslations([blue], "container3", "nextLink");
+<</script>><</done>>
+
+:: Example2
+<div id="translationContainer" class="translationStyle">
+    🟦 <br data-i="2" /> 🟦
+    🟩 <br data-i="1" /> 🟩
+    🟥 <br data-i="0" /> 🟥
+</div>
+
+<span id="nextLink">[[Next|YellowCraneTower]]</span>
+
+<<done>><<script>>
+var red = ["红", ["red", "redden"]];
+var green = ["绿", ["green"]];
+var blue = ["蓝", ["blue"]];
+
+setup.addTranslations([red, green, blue], "translationContainer", "nextLink");
+<</script>><</done>>
+
+:: YellowCraneTower
+<div id="translation1" class="translationStyle">
+    <br data-i="0" /> · <br data-i="1" />
+    <br data-i="2" /><br data-i="3" />
+    <br data-i="4" /><br data-i="5" />
+    <br data-i="6" /><br data-i="7" />
+    <br data-i="8" /><br data-i="9" />
+</div>
+
+<div id="translation2" class="translationStyle hidden">
+    <br data-i="0"/>
+    <br data-i="1"/>
+</div>
+
+<span id="toReveal" class="hidden">[[Next|Quotations]]</span>
+
+<<done>>
+<<script>>
+    // 菩萨蛮·黄鹤楼
+
+    var i0 = [
+        [
+            [[["菩萨", ["bodhisvatta"]]], ["pú sà"]],
+            [[["蛮", ["barbarian"]]], ["mán"]],
+        ],
+        ["To the tune of <em>Pu Sa Man</em>"]
+    ];
+
+    var i1 = [
+        [
+            ["黃", ["yellow"]],
+            ["鶴", ["crane"]],
+            ["楼", ["building", "floor", "tower"]]
+        ],
+        ["Yellow Crane Tower"]
+    ]
+
+    /* ----- */
+
+    // 茫茫九派流中国，
+
+    var t3 = [
+        [
+            ["茫", ["vast", "widespread", "vague", "boundless"]],
+            ["茫", ["vast", "widespread", "vague", "boundless"]],
+        ],
+        ["vast, vast,", "wide, wide,"]
+    ];
+
+    var t4 = ["九", ["nine"]];
+
+    var t6 = [
+        [
+            ["派", ["tributary", "river"]]
+        ],
+        ["tributaries", "rivers"]
+    ];
+
+    var t7 = ["流", ["flow", "stream"]];
+
+    var t8 = [
+        [[
+            [
+                ["中", ["middle", "center", "central"]],
+                ["国", ["country", "nation", "nation-state", "kingdom"]]
+            ],
+            ["China"]
+        ]],
+        ["through China"]
+    ];
+
+    var l1 = [
+        [t3, t4, t6, t7, t8, "，"],
+        ["Wide, wide flow the nine streams through the land,", "Vast, nine rivers sweep through land,", "Nine vast rivers through China grand,"]
+    ];
+
+    /* ----- */
+
+    // 沉沉一线穿南北。
+
+    var b0 = [
+        [
+            ["沉", ["dark", "deep", "heavy", "gloomy", "profound"]],
+            ["沉", ["dark", "deep", "heavy", "gloomy", "profound"]],
+        ],
+        ["dark, dark,", "deep, deep,"]
+    ];
+
+    var b1 = ["一", ["one", "a", "a single", "a solitary"]];
+    var b2 = ["线", ["line", "thread", "route", "path"]];
+
+    var b3 = [
+        [
+            ["穿", ["pierce", "pass through", "thread", "wear"]]
+        ],
+        ["passes", "threads", "passing", "threading"]
+    ];
+
+    var b4 = [
+        [
+            ["南", ["south", "southern"]],
+            ["北", ["north", "northern"]],
+        ],
+        ["south and north", "south, north"]
+    ];
+
+    var l2 = [
+        [b0, b1, b2, b3, b4, "。"],
+        ["<br/>Dark, dark threads the line from south to north.", "<br/>One deep line divides the strand.", "<br/>South to north, cross shade and sand."]
+    ];
+
+    /* ----- */
+
+    // 烟雨莽苍苍，
+
+    var c0 = [
+        [
+            ["烟", ["smoke", "mist", "vapor"]],
+            ["雨", ["rain"]],
+        ],
+        ["mist and rain", "misty rain"]
+    ];
+
+    var c1 = [
+        [
+            ["莽", ["thicket", "overgrowth"]],
+            ["苍", ["blue", "green", "white"]],
+            ["苍", ["blue", "green", "white"]],
+        ],
+        ["indistinct", "distant", "blurred", "vast", "boundless"]
+    ];
+
+    var l3 = [
+        [c0, c1, "，"],
+        ["Blue haze and rain.", "Blurred and boundless, rain and cloud,", "Mist and rain in duskly shroud,", "Mist and rain the sky endowed,"]
+    ];
+
+    /* ----- */
+
+    // 龟蛇锁大江。
+
+    var d0 = [
+        [
+            ["龟", ["tortoise", "turtle"]],
+            ["蛇", ["snake", "serpent"]],
+        ],
+        ["Tortoise Mountain and Snake Hill", "Turtle Mountain and Snake Hill"]
+    ];
+
+    var d1 = ["锁", ["lock", "lock in place", "chain down"]];
+
+    var d2 = [
+        [
+            ["大", ["great", "grand", "big"]],
+            ["江", ["major river", "large river"]],
+        ],
+        ["the river", "the great river", "the Yangtze"]
+    ]
+
+    var l4 = [
+        [d0, d1, d2, "。"],
+        ["<br/>Hills like a snake or tortoise guard the river.", "<br/>Between hills, the river bowed.", "<br/>By the water, hills stand proud.", "<br/>Soft rain over mountains boughed."]
+    ];
+
+    /* ----- */
+
+    // 黄鹤知何去？
+
+    var e1 = [
+        [
+            ["黃", ["yellow"]],
+            ["鶴", ["crane"]],
+        ],
+        ["the yellow crane"]
+    ]
+
+    var e2 = [
+        [
+            ["知", ["know", "understand"]],
+            ["何", ["where", "what", "which"]],
+            ["去", ["leave", "depart", "go"]],
+        ],
+        ["is gone, who knows where", "is gone, who knows whither"]
+    ];
+
+    var l5 = [
+        [e1, e2, "？"],
+        ["The yellow crane is gone, who knows whither?", "Whither went the crane of old?", "The crane took flight in travel bold,", "Wings of yellow crane unfold,", "The crane shed feathers white and gold,"]
+    ];
+
+    /* ----- */
+
+    // 剩有游人处。
+
+    var f0 = [
+        [
+            ["剩", ["remains", "remnants"]],
+            ["有", ["have"]],
+        ],
+        ["remaining are", "left behind are"]
+    ];
+
+    var f1 = [
+        [
+            ["游", ["travel", "tour", "wander", "roam"]],
+            ["人", ["people", "humans"]],
+        ],
+        ["visitors", "wanderers", "tourists"]
+    ];
+
+    var f2 = ["处", ["residing", "dwelling", "outside"]];
+
+    var l6 = [
+        [f0, f1, f2, "。"],
+        ["<br/>Now this tower and region are for the wanderer.", "<br/>Only travellers now behold.", "<br/>No one saw its flight foretold."]
+    ]
+
+    /* ----- */
+
+    // 把酒酹滔滔，
+
+    var g0 = [
+        [
+            ["把", ["take", "hold", "grasp"]],
+            ["酒", ["alcoholic drink"]],
+        ],
+        ["take the wine", "take the drink"]
+    ];
+
+    var g1 = ["酹", ["make a libation", "offering alcohol", "pour", "sprinkle"]];
+    var g2 = ["滔滔", ["rushing water", "torrent", "surge", "overflow"]];
+
+    var l7 = [
+        [g0, g1, g2, "，"],
+        ["I pledge my wine to the surging torrent,", "Pour a drink where great waves roll,", "This libation may console,", "Pledge my wine to the river whole,"]
+    ];
+
+    /* ----- */
+
+    // 心潮逐浪高！
+
+    var h0 = [
+        [
+            ["心", ["heart", "mind"]],
+            ["潮", ["tide", "wave", "damp"]],
+        ],
+        ["tides of my heart"]
+    ];
+
+    var h1 = ["逐", ["chase", "pursue"]];
+
+    var h2 = ["浪", ["waves", "rippling", "unrestrained", "dissolute"]];
+    var h3 = ["高", ["height", "high"]];
+
+    var l8 = [
+        [h0, h1, h2, h3, "！"],
+        ["<br/>The tide of my heart swells with the waves.", "<br/>Let the tides uplift my soul!", "<br/>My heart surges with the shoal!", "<br/>Let wine and spirits overflow!"]
+    ];
+
+    var finalTranslations = [
+        i0, i1, l1, l2, l3, l4, l5, l6, l7, l8
+    ]
+    setup.addTranslations(finalTranslations, "translation1", "translation2");
+
+    /* --------- */
+
+    var maoA = [
+        [
+            ["一", ["one"]],
+            ["九", ["nine"]],
+            ["二", ["two"]],
+            ["七", ["seven"]],
+            ["年", ["year"]]
+        ],
+        ["1927"]
+    ];
+
+    var maoB = [
+        [
+            [[["毛", ["hair", "fur"]]], ["máo"]],
+            [[["泽", ["anoint", "pool", "brilliance"]]], ["zé"]],
+            [[["东", ["east"]]], ["dōng"]],
+        ],
+        ["Mao Zedong"]
+    ];
+
+    const final2 = [maoA, maoB];
+    setup.addTranslations(final2, "translation2", "toReveal");
+
+<</script>>
+<</done>>
+
+:: Quotations
+<div id="translationContainer" class="translationStyle">
+    <br data-i="0" />
+</div>
+
+<span id="toReveal" style="font-size: 50px" class="hidden">[[→|Word]]</span>
+
+<<done>>
+    <<script>>
+        var c = ["引", ["lead", "pull", "reference", "quote"]];
+        var c2 = ["文", ["writing", "literature", "culture", "script"]];
+        var c3 = [[c, c2], ["quotation", "quotations", "reference", "citation"]];
+        setup.addTranslations([c3]);
+    <</script>>
+<</done>>
+
+:: Word
+<div id="translationContainer" class="translationStyle">
+    <br data-i="0" />
+</div>
+
+<span id="toReveal" style="font-size: 50px" class="hidden">[[→|Idioms]]</span>
+
+<<done>>
+    <<script>>
+        var c = ["词", ["phrase", "word", "expression"]];
+        setup.addTranslations([c]);
+    <</script>>
+<</done>>
+
+:: Idioms
+<div id="translationContainer" class="translationStyle">
+    <br data-i="0" />
+</div>
+
+<<done>>
+    <<script>>
+        var character1 = ["成", ["ready-made", "fixed", "become", "accomplish", "finish", "complete"]];
+        var character2 = ["语", ["language", "speech"]];
+        var finalTranslation = [
+            [character1, character2],
+            ["idiom", "Chinese idioms", "chéngyǔ"]
+        ];
+
+        var finalTranslationList = [finalTranslation];
+        setup.addTranslations(finalTranslationList, "translationContainer");
+    <</script>>
+<</done>>

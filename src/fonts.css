@@ -1,0 +1,11 @@
+/* Handles fonts. */
+
+/* Loads in the Noto Serif SC font from Google Fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap');
+
+.translationStyle {
+    font-family: "Noto Serif SC", serif;
+}
+body {
+    font-family: "Noto Serif SC", serif;
+}

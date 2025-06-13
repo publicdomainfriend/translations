@@ -1,0 +1,84 @@
+/* Ensures HTML elements that will be revealed upon a translation's completion are not displayed. */
+.hidden {
+    opacity: 0;
+    display: none;
+}
+body .visible {
+    display: block;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+/* For the very first stage of a translation component, that is, before anything is clicked. Used to make Chinese characters a larger font than the English text. */
+.initialTranslation {
+    font-size: 1.5em;
+}
+@media (max-width: 400px) {
+    .initialTranslation {
+        font-size: 1em;
+    }
+}
+
+/* Default color for a translation component that doesn't have multiple meanings. */
+.translationPart {
+    color: #000000;
+}
+
+/* Default style for a div containing a translation inside it. */
+.translationStyle {
+    font-size: 1.4em;
+    font-weight: 300;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Color of a translation component with multiple meanings. */
+div.translationStyle .hasmeanings {
+    color: #0a29b6;
+}
+/* Color of a translation component with multiple meanings when hovered with the mouse. */
+div.translationStyle .hasmeanings:hover {
+    color: #3177d1;
+}
+
+/* Any translation component that can be clicked will have the cursor change upon hovering over it to reflect that fact.  */
+span[data-canadvance="true"],
+span.canLeftClick {
+    cursor: pointer;
+}
+/* Any translation component that can be clicked will be underlined and turn grey on hover. If the component has multiple meanings, the "grey color" rule will be overridden by the "div div .hansmeanings:hover" rule above. */
+span[data-canadvance="true"]:hover,
+span.canLeftClick:hover {
+    color: #424242;
+    text-decoration: underline;
+}
+/* Any translation component that can be clicked and isn't at its final stage will be bolded and have a slight blurry text shadow. */
+span[data-canadvance="true"]:not(.finalTranslation),
+span.canLeftClick:not(.finalTranslation) {
+    text-shadow: 0 1px 2px currentColor;
+    font-weight: 500;
+}
+
+/* A translation component that is at its final stage will be a lighter grey than a translation component that has not reached its final stage. */
+.finalTranslation {
+    color: #61616d;
+}
+.finalTranslation.canLeftClick:hover {
+    color: #a0a0a0;
+}
+
+/* Default colors to enforce light mode, with light background and grey text, for the body.*/
+body {
+    color: #61616d;
+    background-color: #f8f7f3;
+}
