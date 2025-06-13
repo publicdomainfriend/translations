@@ -2,7 +2,7 @@ This is a Tweego codebase for a Twine Sugarcube 2 project. It demonstrates a tra
 
 ## To Use
 
-If you are viewing this on Github, download the repository zip file with this link.
+If you are viewing this on Github, [download the repository zip file with this link](https://github.com/publicdomainfriend/translations/archive/refs/heads/main.zip).
 
 ### Add the Files
 
